@@ -4,14 +4,16 @@ import Answers from './components/Answers';
 import Utterances from './components/Utterances';
 import Alternatives from './components/Alternatives';
 import 'react-chat-widget/lib/styles.css';
-import logo from './logo.svg';
+import botIcon from "./botIcon.png"
+import "./App.css"
+import BackgroundPage from './components/BackgroundPage';
 
 const jokeURL = "https://api.chucknorris.io/jokes/random";
 
 function App() {
 
   useEffect(() => {
-    addResponseMessage("Hi. Can I help you?");
+    addResponseMessage("Hi I'm pokerBot. Can I help you?");
   }, []);
 
    const handleNewUserMessage = async (newMessage) => {
@@ -80,11 +82,13 @@ function compare(utterancesArray, answersArray, string) {
 
     return (
       <div className="App">
+        <BackgroundPage/>
         <Widget
           handleNewUserMessage={handleNewUserMessage}
-          profileAvatar={logo}
+          profileAvatar={botIcon}
           title="PokerBOT"
           subtitle="Ask me about the Poker Society"
+          showCloseButton={true}
         />
       </div>
     );
