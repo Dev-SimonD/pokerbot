@@ -7,6 +7,7 @@ import 'react-chat-widget/lib/styles.css';
 import botIcon from "./botIcon.png"
 import "./App.css"
 import BackgroundPage from './components/BackgroundPage';
+//import Filter from 'bad-words';
 
 const jokeURL = "https://api.chucknorris.io/jokes/random";
 
@@ -16,7 +17,10 @@ function App() {
     addResponseMessage("Hi I'm pokerBot. Can I help you?");
   }, []);
 
+  
+
    const handleNewUserMessage = async (newMessage) => {
+
     let product;
       let text = newMessage.toLowerCase().replace(/[^\w\s\d]/gi, "");
       text = text

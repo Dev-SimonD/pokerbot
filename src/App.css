@@ -4,9 +4,10 @@
 
 .rcw-conversation-container{
   padding-top: 20%;
+  box-shadow: none;
 }
-
-
-
+.rcw-message-client{
+  padding-right: 10px;
+}
 
 
